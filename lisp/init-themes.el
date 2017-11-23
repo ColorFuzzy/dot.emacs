@@ -13,4 +13,16 @@
 (set-face-background 'mode-line "#303030")
 (set-face-background 'mode-line-inactive "#121212")
 
+;; diminish - mode-line
+;; todo: why not work
+;; (x/require-package 'diminish)
+;; (dolist (dim-pairs '((company . company-mode)
+;; 		     (rainbow-mode . rainbow-mode)))
+;;     (with-eval-after-load (car dim-pairs)
+;;       (diminish (cdr dim-pairs))))
+(with-eval-after-load 'company
+  (diminish 'company-mode))
+(with-eval-after-load 'rainbow-mode
+  (diminish 'rainbow-mode))
+
 (provide 'init-themes)

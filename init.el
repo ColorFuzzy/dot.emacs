@@ -9,7 +9,7 @@
 (defconst x//is-a-mac (eq system-type 'darwin))
 
 ;; should at the very first
-(require 'init-elpa)  
+(require 'init-elpa)
 
 (require 'init-builtins)
 (require 'init-company)
