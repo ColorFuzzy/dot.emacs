@@ -12,6 +12,7 @@
 (require 'init-elpa)  
 
 (require 'init-builtins)
+(require 'init-company)
 
 ;; should at the very last
 (require 'init-themes)  
