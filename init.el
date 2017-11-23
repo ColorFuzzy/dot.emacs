@@ -1,32 +1,49 @@
-(menu-bar-mode -1)
+;; notes:
+;;   x//variable
+;;   x/function
 
-(require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(package-initialize)
 
-(setq-default
- blink-cursor-interval 0.4
- case-fold-search t
- column-number-mode t
- delete-selection-mode t
- indent-tabs-mode nil
- make-backup-files nil
- save-interprogram-paste-before-kill t
- scroll-preserve-screen-position 'always
- set-mark-command-repeat-pop t
- tooltip-delay 1.5
- truncate-lines -1
- truncate-partial-width-windows nil
- ring-bell-function 'ignore)
+;; (package-initialize) ;; emacs needs this line
 
-(xterm-mouse-mode 1)
-(set-face-background 'mode-line "#303030")
-(set-face-background 'mode-line-inactive "#121212")
-(setq-default left-margin-width 1 riGht-margin-width 1)
-;; (set-window-buffer nil (current-buffer))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(defconst x//is-a-mac (eq system-type 'darwin))
 
-;; Installed packages
-;; monokai-theme
+;; should at the very first
+(require 'init-elpa)  
 
-(load-theme 'monokai t)
+(require 'init-builtins)
+
+;; should at the very last
+(require 'init-themes)  
+(require 'init-shortcuts)
+
+
+;; -----------------------------------------------------------------------------
+
+;; helm & shackle
+(require 'helm-config)
+(define-key global-map (kbd "M-x") 'helm-M-x)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x C-r") 'helm-recentf)
+(define-key global-map (kbd "C-s") 'helm-occur)
+(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+(setq helm-buffers-fuzzy-matching t
+      helm-semantic-fuzzy-match   t
+      helm-imenu-fuzzy-match      t
+      helm-M-x-fuzzy-match        t
+      helm-locate-fuzzy-match     t
+      helm-apropos-fuzzy-match    t
+      helm-recentf-fuzzy-match    t
+      helm-lisp-fuzzy-completion  t)
+(setq helm-split-window-in-side-p           nil
+      helm-move-to-line-cycle-in-source     nil
+      helm-ff-search-library-in-sexp        t
+      helm-scroll-amount                    8
+      helm-ff-file-name-history-use-recentf t
+      helm-echo-input-in-header-line t)
+(setq helm-display-function #'pop-to-buffer)
+(setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :ratio 0.46)))
+(with-eval-after-load 'helm-files
+  (set-face-background 'helm-ff-dotted-directory nil))
+(shackle-mode)

@@ -1,3 +1,8 @@
+# todos
+
+- auto compile all files
+- setup daemon mode
+
 # install latest emacs on ubuntu
 
 sudo add-apt-repository ppa:kelleyk/emacs

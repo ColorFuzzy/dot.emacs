@@ -1,1 +1,4 @@
 /elpa
+/auto-save-list
+custom_file.el
+*.elc
