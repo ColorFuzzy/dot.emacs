@@ -33,6 +33,7 @@
 (define-key global-map (kbd "C-c e f") 'fzf)
 (define-key global-map (kbd "C-c e g") 'fzf-git)
 (define-key global-map (kbd "C-c e t") 'neotree-toggle)
+(define-key global-map (kbd "C-c e i") 'imenu-list-smart-toggle)
 
 ;; C-c b - buffer
 ;;(define-key global-map (kbd "C-c b n") 'x/byte-compile-init-dir)  ;; new buffer
