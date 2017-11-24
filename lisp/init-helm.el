@@ -17,6 +17,7 @@
       helm-ff-file-name-history-use-recentf t
       helm-echo-input-in-header-line        t)
 (setq helm-display-function #'pop-to-buffer)  ;; shackle
+(add-hook 'helm-after-initialize-hook (lambda () (with-helm-buffer (setq truncate-lines t))))
 
 (x/require-package 'fzf)
 

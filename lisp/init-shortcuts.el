@@ -1,6 +1,7 @@
 (x/require-package 'guide-key)
 (setq guide-key/guide-key-sequence
       '("C-c e"
+        "C-c h"
         "C-c p"
         "C-c"
         "C-h"
@@ -43,5 +44,14 @@
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "C-s") 'helm-occur)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+(define-key global-map (kbd "C-c h") 'helm-command-prefix)
+(define-key global-map (kbd "C-c h x") 'helm-register)
+(define-key global-map (kbd "C-x b") 'helm-mini)
+(add-hook 'helm-after-initialize-hook
+          (lambda ()
+            (define-key helm-map (kbd "C-z")  'helm-select-action)
+            ;; rebind tab to run persistent action && make TAB work in terminal
+            (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) 
+            (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)))
 
 (provide 'init-shortcuts)
