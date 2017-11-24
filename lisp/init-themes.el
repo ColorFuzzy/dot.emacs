@@ -29,6 +29,7 @@
 (with-eval-after-load 'company (diminish 'company-mode))
 (with-eval-after-load 'rainbow-mode (diminish 'rainbow-mode))
 (with-eval-after-load 'undo-tree (diminish 'undo-tree-mode))
+(with-eval-after-load 'guide-key (diminish 'guide-key-mode))
 
 ;; helm & shackle
 (with-eval-after-load 'helm-files
