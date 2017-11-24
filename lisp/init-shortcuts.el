@@ -24,7 +24,8 @@
   (setq mac-option-modifier 'none))
 
 ;; todo: make it work in terminal
-(define-key global-map (kbd "S-SPC") 'avy-goto-char-2)
+(define-key global-map (kbd "S-SPC") 'avy-goto-word-1)
+(define-key global-map (kbd "C-m") 'avy-goto-word-1)
 
 ;; C-c e - emacs
 ;;(define-key global-map (kbd "C-c e c") 'x/byte-compile-init-dir)
