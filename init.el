@@ -1,14 +1,8 @@
-;; notes:
-;;   x//variable
-;;   x/function
-
-;; (package-initialize) ;; emacs needs this line
-
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(defconst x//is-a-mac (eq system-type 'darwin))
 
 ;; should at the very first
-(require 'init-elpa)
+(require 'init-libs)
+(require 'init-elpa) ;; (package-initialize)
 
 (require 'init-builtins)
 (require 'init-company)
