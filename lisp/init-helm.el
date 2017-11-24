@@ -20,4 +20,6 @@
 (setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :ratio 0.46)))
 (shackle-mode)
 
+(x/require-package 'fzf)
+
 (provide 'init-helm)

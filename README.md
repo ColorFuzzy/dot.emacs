@@ -3,6 +3,7 @@
 - setup daemon mode
 - stop create .#init.el file
 - fuzzy company mode
+- add fzf mode with helm - or - shackle-mode
 
 # install latest emacs on ubuntu
 
