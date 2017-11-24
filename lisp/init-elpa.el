@@ -9,7 +9,7 @@ re-downloaded in order to locate PACKAGE."
       t
     (if (or (assoc package package-archive-contents) no-refresh)
         (if (boundp 'package-selected-packages)
-            ;; Not record this as a package the user installed explicitly
+            ;; not record this as a package the user installed explicitly
             (package-install package t)
           (package-install package))
       (progn

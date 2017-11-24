@@ -2,7 +2,6 @@
 ;;   x//variable
 ;;   x/function
 
-
 ;; (package-initialize) ;; emacs needs this line
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -18,10 +17,11 @@
 (require 'init-themes)  
 (require 'init-shortcuts)
 
-
 ;; -----------------------------------------------------------------------------
 
 ;; helm & shackle
+(x/require-package 'helm)
+(x/require-package 'shackle)
 (require 'helm-config)
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
@@ -31,6 +31,7 @@
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (setq helm-buffers-fuzzy-matching t
       helm-semantic-fuzzy-match   t
+      
       helm-imenu-fuzzy-match      t
       helm-M-x-fuzzy-match        t
       helm-locate-fuzzy-match     t
