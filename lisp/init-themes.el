@@ -1,5 +1,6 @@
 (require 'cl-lib)
 
+;; hide menu-bar
 (menu-bar-mode -1)
 
 ;; auto backgroud the color value

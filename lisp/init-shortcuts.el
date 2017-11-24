@@ -10,7 +10,7 @@
 ;; todo: add function to remove all elc files
 
 ;; C-c e - emacs
-;;(define-key global-map (kbd "C-c e c") 'x/byte-compile-init-dir)
+(define-key global-map (kbd "C-c e c") 'x/byte-compile-init-dir)
 (define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
 (define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
 
