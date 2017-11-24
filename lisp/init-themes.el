@@ -13,10 +13,12 @@
 
 ;; rainbow delimiters
 (x/require-package 'rainbow-delimiters)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; set margin
-(setq-default left-margin-width 1 right-margin-width 0)
+(setq-default
+ left-margin-width 1
+ right-margin-width 0)
 
 ;; mode-line face
 (set-face-background 'mode-line "#303030")

@@ -1,7 +1,8 @@
 # todos
 
-- auto compile all files
 - setup daemon mode
+- stop create .#init.el file
+- fuzzy company mode
 
 # install latest emacs on ubuntu
 
