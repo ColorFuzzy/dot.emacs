@@ -6,6 +6,7 @@
 
 (require 'init-builtins)
 (require 'init-helm)
+(require 'init-projects)
 (require 'init-evil)
 (require 'init-company)
 

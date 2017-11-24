@@ -23,3 +23,7 @@ sudo apt install emacs25  // emacs25-nox terminal only
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+## install ag
+
+sudo apt-get install silversearcher-ag  // linux
+brew install the_silver_searcher  // mac
