@@ -1,4 +1,5 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; should at the very first
 (require 'init-libs)
@@ -9,6 +10,7 @@
 (require 'init-projects)
 (require 'init-evil)
 (require 'init-company)
+(require 'init-misc)
 
 ;; should at the very last
 (require 'init-themes)  

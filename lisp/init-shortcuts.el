@@ -23,12 +23,16 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'none))
 
+;; todo: make it work in terminal
+(define-key global-map (kbd "S-SPC") 'avy-goto-char-2)
+
 ;; C-c e - emacs
 ;;(define-key global-map (kbd "C-c e c") 'x/byte-compile-init-dir)
 (define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
 (define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
 (define-key global-map (kbd "C-c e f") 'fzf)
 (define-key global-map (kbd "C-c e g") 'fzf-git)
+(define-key global-map (kbd "C-c e t") 'neotree-toggle)
 
 ;; C-c b - buffer
 ;;(define-key global-map (kbd "C-c b n") 'x/byte-compile-init-dir)  ;; new buffer
