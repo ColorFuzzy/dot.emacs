@@ -47,6 +47,7 @@
 (define-key global-map (kbd "C-c h") 'helm-command-prefix)
 (define-key global-map (kbd "C-c h x") 'helm-register)
 (define-key global-map (kbd "C-x b") 'helm-mini)
+(define-key global-map (kbd "C-h b") 'helm-descbinds)
 (add-hook 'helm-after-initialize-hook
           (lambda ()
             (define-key helm-map (kbd "C-z")  'helm-select-action)

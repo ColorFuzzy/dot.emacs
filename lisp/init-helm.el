@@ -1,5 +1,6 @@
 (x/require-package 'helm)
 (x/require-package 'shackle)
+
 (require 'helm-config)
 
 (setq helm-buffers-fuzzy-matching t
@@ -20,5 +21,6 @@
 (add-hook 'helm-after-initialize-hook (lambda () (with-helm-buffer (setq truncate-lines t))))
 
 (x/require-package 'fzf)
+(x/require-package 'helm-descbinds)  ;; describe-bindings
 
 (provide 'init-helm)
