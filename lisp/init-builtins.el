@@ -3,6 +3,9 @@
   (setenv "PATH" (concat (getenv "PATH") ":" bin-path))
   (add-to-list 'exec-path bin-path))
 
+;; insert spaces instead of tab
+(setq-default indent-tabs-mode nil)
+
 ;; save custom-set-variables to this file
 (setq custom-file (expand-file-name "custom_file.el" user-emacs-directory))
 (if (file-exists-p custom-file)

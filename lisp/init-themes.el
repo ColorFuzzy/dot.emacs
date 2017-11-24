@@ -26,9 +26,12 @@
 
 ;; diminish - mode-line
 (x/require-package 'diminish)
-(cl-loop for (file-or-mode-name . mode-name) in '((company . company-mode)
-				(rainbow-mode . rainbow-mode))
-	 do (with-eval-after-load file-or-mode-name
-	      (diminish mode-name)))
+(with-eval-after-load 'company (diminish 'company-mode))
+(with-eval-after-load 'rainbow-mode (diminish 'rainbow-mode))
+(with-eval-after-load 'undo-tree (diminish 'undo-tree-mode))
+
+;; helm & shackle
+(with-eval-after-load 'helm-files
+  (set-face-background 'helm-ff-dotted-directory nil))
 
 (provide 'init-themes)
