@@ -35,4 +35,10 @@
 (with-eval-after-load 'helm-files
   (set-face-background 'helm-ff-dotted-directory nil))
 
+;; window management
+(setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :ratio 0.46)
+                      ("*Help*" :select t :align t :ratio 0.46)
+                      ))
+(shackle-mode)
+
 (provide 'init-themes)

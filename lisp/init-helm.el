@@ -16,9 +16,7 @@
       helm-scroll-amount                    8
       helm-ff-file-name-history-use-recentf t
       helm-echo-input-in-header-line        t)
-(setq helm-display-function #'pop-to-buffer)
-(setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :ratio 0.46)))
-(shackle-mode)
+(setq helm-display-function #'pop-to-buffer)  ;; shackle
 
 (x/require-package 'fzf)
 
