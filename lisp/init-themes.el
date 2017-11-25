@@ -25,8 +25,9 @@
 (set-face-background 'mode-line-inactive "#121212")
 
 ;; avy
-(set-face-background 'avy-lead-face-0 "#800000")
-(set-face-background 'avy-lead-face-0 "#008000")
+(with-eval-after-load 'avy
+  (set-face-background 'avy-lead-face-0 "#800000")
+  (set-face-background 'avy-lead-face-0 "#008000"))
 
 ;; highlight current line
 (global-hl-line-mode t)
