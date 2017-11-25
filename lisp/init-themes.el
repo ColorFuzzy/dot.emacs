@@ -20,22 +20,8 @@
  left-margin-width 1
  right-margin-width 0)
 
-;; mode-line face
-(set-face-background 'mode-line "#303030")
-(set-face-background 'mode-line-inactive "#121212")
-
-;; avy
-(with-eval-after-load 'avy
-  (set-face-background 'avy-lead-face-0 "#800000")
-  (set-face-background 'avy-lead-face-0 "#008000"))
-
 ;; highlight current line
 (global-hl-line-mode t)
-(set-face-background 'hl-line "#282828")
-
-;; indent guide
-(with-eval-after-load 'indent-guide-mode
-  (set-face-foreground 'indent-guide-face "#800000"))
 
 ;; diminish - mode-line
 (x/require-package 'diminish)
@@ -45,14 +31,29 @@
 (with-eval-after-load 'guide-key (diminish 'guide-key-mode))
 (with-eval-after-load 'highlight-symbol (diminish 'highlight-symbol-mode))
 (with-eval-after-load 'indent-guide (diminish 'indent-guide-mode))
-
-;; helm & shackle
-(with-eval-after-load 'helm-files
-  (set-face-background 'helm-ff-dotted-directory nil))
+(with-eval-after-load 'auto-revert-mode (diminish 'auto-revert-mode))
 
 ;; window management
 (setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :ratio 0.46)
                       ("*Help*" :select t :align t :ratio 0.46)))
 (shackle-mode)
+
+(custom-set-faces
+ ;; mode-line
+ '(mode-line ((t (:background "#303030"))))
+ '(mode-line-inactive ((t (:background "#121212"))))
+
+ ;; highlight current line
+ '(hl-line ((t (:background "#282828"))))
+ 
+ ;; indent guide
+ '(indent-guide-face ((t (:foreground "#800000"))))
+
+ ;; helm & shackle
+ '(helm-ff-dotted-directory ((t (:background "#101010"))))
+
+ ;; avy
+ '(avy-lead-face-0 ((t (:background "#008000"))))
+ )
 
 (provide 'init-themes)
