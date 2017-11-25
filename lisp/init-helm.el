@@ -22,6 +22,7 @@
 
 (x/require-package 'fzf)
 (x/require-package 'helm-descbinds)  ;; describe-bindings
+(x/require-package 'helm-describe-modes)
 
 (x/require-package 'ag)
 (x/require-package 'helm-ag)

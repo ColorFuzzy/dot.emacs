@@ -71,4 +71,6 @@
     (eval-region (region-beginning) (region-end))
     (keyboard-quit)))
 
+(define-key global-map [remap describe-mode] 'helm-describe-modes)
+
 (provide 'init-shortcuts)
