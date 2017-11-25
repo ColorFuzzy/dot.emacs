@@ -1,9 +1,8 @@
 # todos
 
 - setup daemon mode
-- stop create .#init.el file
-- fuzzy company mode
 - add fzf mode with helm - or - shackle-mode
+- add shackle - C-c e q => quit last window
 
 # install latest emacs on ubuntu
 
