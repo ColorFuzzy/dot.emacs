@@ -2,6 +2,7 @@
 (setq guide-key/guide-key-sequence
       '("C-c e"
         "C-c h"
+        "C-c v"
         "C-c p"
         "C-c"
         "C-h"
@@ -45,6 +46,9 @@
 (define-key global-map (kbd "C-c h x") 'helm-register)
 
 (define-key global-map (kbd "C-c j") 'avy-goto-word-1)
+
+(define-key global-map (kbd "C-c v s") 'magit-status)
+
 (define-key global-map (kbd "C-h b") 'helm-descbinds)
 (define-key global-map (kbd "C-o") 'evil-execute-in-normal-state)
 (define-key global-map (kbd "C-s") 'helm-occur)

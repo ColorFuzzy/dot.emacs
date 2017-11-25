@@ -24,4 +24,7 @@
 ;; ace jump
 (x/require-package 'avy)
 
+;; git support
+(x/require-package 'magit)
+
 (provide 'init-misc)
