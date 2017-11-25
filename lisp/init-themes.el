@@ -33,6 +33,10 @@
 (global-hl-line-mode t)
 (set-face-background 'hl-line "#282828")
 
+;; indent guide
+(with-eval-after-load 'indent-guide-mode
+  (set-face-foreground 'indent-guide-face "#800000"))
+
 ;; diminish - mode-line
 (x/require-package 'diminish)
 (with-eval-after-load 'company (diminish 'company-mode))
