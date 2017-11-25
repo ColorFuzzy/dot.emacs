@@ -35,18 +35,22 @@
             (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)))
 
 (define-key global-map (kbd "C-c e b") 'x/create-tmp-buffer)
-(define-key global-map (kbd "C-c e f") 'fzf)
-(define-key global-map (kbd "C-c e g") 'fzf-git)
-(define-key global-map (kbd "C-c e i") 'imenu-list-smart-toggle)
 (define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
 (define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
+(define-key global-map (kbd "C-c e f") 'fzf)
+(define-key global-map (kbd "C-c e g") 'fzf-git)
 (define-key global-map (kbd "C-c e t") 'neotree-toggle)
+(define-key global-map (kbd "C-c e i") 'imenu-list-smart-toggle)
+(define-key global-map (kbd "C-c e n") 'highlight-symbol-next)
+(define-key global-map (kbd "C-c e p") 'highlight-symbol-prev)
+
+(define-key global-map (kbd "C-c b n") 'next-buffer)
+(define-key global-map (kbd "C-c b p") 'previous-buffer)
 
 (define-key global-map (kbd "C-c h") 'helm-command-prefix)
 (define-key global-map (kbd "C-c h x") 'helm-register)
 
 (define-key global-map (kbd "C-c j") 'avy-goto-word-1)
-
 (define-key global-map (kbd "C-c v s") 'magit-status)
 
 (define-key global-map (kbd "C-h b") 'helm-descbinds)
