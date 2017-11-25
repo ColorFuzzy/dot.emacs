@@ -40,8 +40,10 @@
 (define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
 (define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
 (define-key global-map (kbd "C-c e t") 'neotree-toggle)
-(define-key global-map (kbd "C-c h x") 'helm-register)
+
 (define-key global-map (kbd "C-c h") 'helm-command-prefix)
+(define-key global-map (kbd "C-c h x") 'helm-register)
+
 (define-key global-map (kbd "C-c j") 'avy-goto-word-1)
 (define-key global-map (kbd "C-h b") 'helm-descbinds)
 (define-key global-map (kbd "C-o") 'evil-execute-in-normal-state)
