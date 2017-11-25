@@ -25,41 +25,33 @@
 
 ;; todo: make it work in terminal
 (define-key global-map (kbd "S-SPC") 'avy-goto-word-1)
-(define-key global-map (kbd "C-c j") 'avy-goto-word-1)  ;; position
 
-;; C-c e - emacs
-;;(define-key global-map (kbd "C-c e c") 'x/byte-compile-init-dir)
-(define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
-(define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
-(define-key global-map (kbd "C-c e f") 'fzf)
-(define-key global-map (kbd "C-c e g") 'fzf-git)
-(define-key global-map (kbd "C-c e t") 'neotree-toggle)
-(define-key global-map (kbd "C-c e i") 'imenu-list-smart-toggle)
-
-;; C-c b - buffer
-;;(define-key global-map (kbd "C-c b n") 'x/byte-compile-init-dir)  ;; new buffer
-
-;; evil: C-z & C-o
-(define-key global-map (kbd "C-o") 'evil-execute-in-normal-state)
-(define-key global-map (kbd "C-z") 'evil-exit-emacs-state)
-
-;; helm
-(define-key global-map (kbd "C-c h x") 'helm-register)
-(define-key global-map (kbd "C-c h") 'helm-command-prefix)
-(define-key global-map (kbd "C-h b") 'helm-descbinds)
-(define-key global-map (kbd "C-h b") 'helm-descbinds)
-(define-key global-map (kbd "C-s") 'helm-occur)
-(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
-(define-key global-map (kbd "C-x C-f") 'helm-find-files)
-(define-key global-map (kbd "C-x r b") 'helm-bookmarks)
-(define-key global-map (kbd "C-x b") 'helm-mini)
-(define-key global-map (kbd "M-x") 'helm-M-x)
-(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (add-hook 'helm-after-initialize-hook
           (lambda ()
             (define-key helm-map (kbd "C-z")  'helm-select-action)
             ;; rebind tab to run persistent action && make TAB work in terminal
             (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) 
             (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)))
+
+(define-key global-map (kbd "C-c e b") 'x/create-tmp-buffer)
+(define-key global-map (kbd "C-c e f") 'fzf)
+(define-key global-map (kbd "C-c e g") 'fzf-git)
+(define-key global-map (kbd "C-c e i") 'imenu-list-smart-toggle)
+(define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
+(define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
+(define-key global-map (kbd "C-c e t") 'neotree-toggle)
+(define-key global-map (kbd "C-c h x") 'helm-register)
+(define-key global-map (kbd "C-c h") 'helm-command-prefix)
+(define-key global-map (kbd "C-c j") 'avy-goto-word-1)
+(define-key global-map (kbd "C-h b") 'helm-descbinds)
+(define-key global-map (kbd "C-o") 'evil-execute-in-normal-state)
+(define-key global-map (kbd "C-s") 'helm-occur)
+(define-key global-map (kbd "C-x b") 'helm-mini)
+(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "C-x r b") 'helm-bookmarks)
+(define-key global-map (kbd "C-z") 'evil-exit-emacs-state)
+(define-key global-map (kbd "M-x") 'helm-M-x)
+(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 
 (provide 'init-shortcuts)

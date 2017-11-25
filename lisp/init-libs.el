@@ -9,4 +9,14 @@
 		 "custom_file.elc"))
     (delete-file (expand-file-name elc user-emacs-directory))))
 
+(defun x/create-tmp-buffer ()
+  (interactive)
+  (cl-loop for index from 1 to 99
+         do (let ((name (format "*tmp%02d*" index)))
+              (unless (get-buffer name)
+                (progn
+                  (push-mark)
+                  (switch-to-buffer (get-buffer-create name))
+                  (cl-return))))))
+
 (provide 'init-libs)
