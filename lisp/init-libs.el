@@ -32,9 +32,9 @@
   )
 
 (defun x/active-region-on ()
-  (x/active-region-mode 1))
+  (x/active-region-mode t))
 (defun x/active-region-off ()
-  (x/active-region-mode -1))
+  (x/active-region-mode nil))
 (add-hook 'activate-mark-hook 'x/active-region-on)
 (add-hook 'deactivate-mark-hook 'x/active-region-off)
 
