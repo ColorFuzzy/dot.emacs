@@ -27,6 +27,10 @@
 ;; git support
 (x/require-package 'magit)
 
+;; quickly jumps between other symbols found at point in Emacs
+(x/require-package 'smartscan)
+(global-smartscan-mode t)
+
 ;; rest client
 (x/require-package 'restclient)
 (x/require-package 'restclient-helm)
