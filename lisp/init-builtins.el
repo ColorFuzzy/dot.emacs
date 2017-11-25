@@ -13,13 +13,15 @@
 ;; convenient
 (setq-default
  ring-bell-function 'ignore
- delete-selection-mode t
  save-interprogram-paste-before-kill t
  scroll-preserve-screen-position 'always
  blink-cursor-interval 0.4)
 
+;; delete selection
+(delete-selection-mode t)
+
 ;; treated this_is_a_symbol as one word
-(superword-mode t)
+(global-superword-mode t)
 
 ;; auto revert local changes
 (global-auto-revert-mode)
