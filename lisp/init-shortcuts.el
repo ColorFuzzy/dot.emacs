@@ -25,7 +25,7 @@
 
 ;; todo: make it work in terminal
 (define-key global-map (kbd "S-SPC") 'avy-goto-word-1)
-(define-key global-map (kbd "C-x p") 'avy-goto-word-1)  ;; position
+(define-key global-map (kbd "C-c j") 'avy-goto-word-1)  ;; position
 
 ;; C-c e - emacs
 ;;(define-key global-map (kbd "C-c e c") 'x/byte-compile-init-dir)
