@@ -65,4 +65,10 @@
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 
+(define-key x//active-region-mode-map (kbd "C-x C-e")
+  (lambda ()
+    (interactive)
+    (eval-region (region-beginning) (region-end))
+    (keyboard-quit)))
+
 (provide 'init-shortcuts)

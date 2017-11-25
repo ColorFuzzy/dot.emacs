@@ -27,3 +27,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 sudo apt-get install silversearcher-ag  // linux
 brew install the_silver_searcher  // mac
+
+## install gnu global
+
+sudo apt-get install curl wget ncurses-dev exuberant-ctags
+wget http://tamacom.com/global/global-6.5.7.tar.gz
+
+./configure
+make
+sudo make install

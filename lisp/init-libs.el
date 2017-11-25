@@ -19,4 +19,23 @@
                   (switch-to-buffer (get-buffer-create name))
                   (cl-return))))))
 
+;; x/active-region-mode
+(defvar x//active-region-mode-map
+  (let ((map (make-sparse-keymap)))
+    map))
+(define-minor-mode x/active-region-mode
+  "Active Region minor mode."
+  :init-value nil
+  :lighter nil
+  :keymap x//active-region-mode-map
+  :group nil
+  )
+
+(defun x/active-region-on ()
+  (x/active-region-mode 1))
+(defun x/active-region-off ()
+  (x/active-region-mode -1))
+(add-hook 'activate-mark-hook 'x/active-region-on)
+(add-hook 'deactivate-mark-hook 'x/active-region-off)
+
 (provide 'init-libs)

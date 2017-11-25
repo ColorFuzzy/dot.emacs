@@ -8,6 +8,7 @@
 (require 'init-builtins)
 (require 'init-helm)
 (require 'init-projects)
+;(require 'init-gtags)
 (require 'init-evil)
 (require 'init-company)
 (require 'init-misc)
