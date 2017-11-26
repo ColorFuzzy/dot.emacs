@@ -1,24 +1,6 @@
-(x/require-package 'guide-key)
-(setq guide-key/guide-key-sequence
-      '("C-c e"
-        "C-c h"
-        "C-c v"
-        "C-c p"
-        "C-c"
-        "C-h"
-        "C-x 4"
-        "C-x 5"
-        "C-x C-k",
-        "C-x n"
-        "C-x r"
-        "C-x v"
-        "C-x"
-        "M-g",
-        "M-s h",
-        "M-s"))
-(setq guide-key/idle-delay 1.0)
-(add-hook 'after-init-hook
-          (lambda () (guide-key-mode 1)))
+(x/require-package 'which-key)
+(which-key-mode t)
+(setq which-key-idle-delay 1.0)
 
 (when x//is-a-mac
   (setq mac-command-modifier 'meta)
