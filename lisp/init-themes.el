@@ -43,6 +43,9 @@
  '(mode-line ((t (:background "#303030"))))
  '(mode-line-inactive ((t (:background "#121212"))))
 
+ ;; region
+ '(region ((t (:background "#203020"))))
+
  ;; highlight current line
  '(hl-line ((t (:background "#282828"))))
  
