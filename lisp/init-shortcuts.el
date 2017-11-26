@@ -65,6 +65,9 @@
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 
+(define-key global-map (kbd "M-n") 'highlight-symbol-next)
+(define-key global-map (kbd "M-p") 'highlight-symbol-prev)
+
 (define-key x//active-region-mode-map (kbd "C-x C-e")
   (lambda ()
     (interactive)

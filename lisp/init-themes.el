@@ -51,7 +51,8 @@
 
  ;; helm & shackle
  '(helm-ff-dotted-directory ((t (:background "#101010"))))
-
+ '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
+ 
  ;; avy
  '(avy-lead-face-0 ((t (:background "#008000"))))
  )
