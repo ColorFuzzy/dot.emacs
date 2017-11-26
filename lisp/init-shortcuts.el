@@ -40,6 +40,7 @@
 (define-key global-map (kbd "C-s") 'helm-occur)
 (define-key global-map (kbd "C-x b") 'helm-mini)
 (define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x C-e") 'x/eval)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "C-x r b") 'helm-bookmarks)
@@ -49,12 +50,6 @@
 
 (define-key global-map (kbd "M-n") 'highlight-symbol-next)
 (define-key global-map (kbd "M-p") 'highlight-symbol-prev)
-
-(define-key x//active-region-mode-map (kbd "C-x C-e")
-  (lambda ()
-    (interactive)
-    (eval-region (region-beginning) (region-end))
-    (keyboard-quit)))
 
 (define-key global-map [remap describe-mode] 'helm-describe-modes)
 
