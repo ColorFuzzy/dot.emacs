@@ -2,12 +2,13 @@
 (which-key-mode t)
 (setq which-key-idle-delay 1.0)
 
+(x/require-package 'key-chord)
+(key-chord-mode t)
+(key-chord-define-global "jj" 'avy-goto-word-1)
+
 (when x//is-a-mac
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'none))
-
-;; todo: make it work in terminal
-(define-key global-map (kbd "S-SPC") 'avy-goto-word-1)
 
 (add-hook 'helm-after-initialize-hook
           (lambda ()
@@ -32,7 +33,6 @@
 (define-key global-map (kbd "C-c h") 'helm-command-prefix)
 (define-key global-map (kbd "C-c h x") 'helm-register)
 
-(define-key global-map (kbd "C-c j") 'avy-goto-word-1)
 (define-key global-map (kbd "C-c v s") 'magit-status)
 
 (define-key global-map (kbd "C-h b") 'helm-descbinds)
