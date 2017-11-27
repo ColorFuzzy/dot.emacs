@@ -45,3 +45,5 @@ wget http://tamacom.com/global/global-6.5.7.tar.gz
 ./configure
 make
 sudo make install
+
+## install org

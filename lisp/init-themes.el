@@ -53,14 +53,16 @@
      '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
      ;; mode-line
      '(mode-line ((t (:background "#006030" :box nil))))
-     '(mode-line-inactive ((t (:background "#006030" :box nil))))
+     '(mode-line-inactive ((t (:background "#003030" :box nil))))
      ;; region
-     '(region ((t (:background "#208020"))))
+     '(region ((t (:background "#203080"))))
      ;; helm & shackle
      '(helm-ff-dotted-directory ((t (:foreground "#AAAAAA"))))
      '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
      ;; sr-speedbar
      '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
+     ;; highlight-symbol
+     '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
      )
   (custom-set-faces
    ;; show paren match
@@ -69,7 +71,7 @@
    '(mode-line ((t (:background "#303030"))))
    '(mode-line-inactive ((t (:background "#121212"))))
    ;; region
-   '(region ((t (:background "#203020"))))
+   '(region ((t (:background "#203080"))))
    ;; highlight current line
    '(hl-line ((t (:background "#282828"))))
    ;; indent guide
@@ -81,6 +83,8 @@
    '(avy-lead-face-0 ((t (:background "#008000"))))
    ;; sr-speedbar
    '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
+   ;; highlight-symbol
+   '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
    ))
 
 (provide 'init-themes)
