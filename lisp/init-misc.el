@@ -21,7 +21,7 @@
 (setq sr-speedbar-width 27)
 (setq speedbar-initial-expansion-list-name "buffers")
 (setq sr-speedbar-right-side nil)
-(setq sr-speedbar-auto-refresh nil)
+(setq sr-speedbar-auto-refresh t)
 (add-hook 'window-setup-hook
           (lambda ()
             (sr-speedbar-open)
