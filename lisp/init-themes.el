@@ -47,8 +47,8 @@
 
 (if (display-graphic-p)
     (custom-set-faces
-     ;; font suport
-     '(default ((t (:family "Source Code Pro"))))
+     ;; font suport: Source Code Pro & Monaco
+     '(default ((t (:family "Source Code Pro")))) 
      ;; show paren match
      '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
      ;; highlight-symbol
