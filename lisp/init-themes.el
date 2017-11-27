@@ -64,9 +64,9 @@
      ;; highlight-symbol
      '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
      ;; org-mode
-     `(org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.1))))
-     `(org-level-2 ((t (:bold t :foreground "#edd400" :height 1.1))))
-     `(org-level-3 ((t (:bold t :foreground "#6ac214" :height 1.1))))
+     `(org-level-1 ((t (:bold nil :foreground "dodger blue" :height 1.1))))
+     `(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.1))))
+     `(org-level-3 ((t (:bold nil :foreground "#6ac214" :height 1.1))))
      `(org-level-4 ((t (:bold nil :foreground "#30e8d2" :height 1.1))))
      `(org-level-5 ((t (:bold nil :foreground "#e539a0" :height 1.1))))
      )
