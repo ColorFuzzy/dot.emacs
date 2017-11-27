@@ -20,6 +20,7 @@
 (setq speedbar-use-images nil)
 (setq sr-speedbar-width 27)
 (setq speedbar-initial-expansion-list-name "buffers")
+(setq sr-speedbar-right-side nil)
 (setq sr-speedbar-auto-refresh nil)
 (add-hook 'window-setup-hook
           (lambda ()
@@ -30,9 +31,9 @@
 ;; imenu-list
 (x/require-package 'imenu-list)
 (setq imenu-list-focus-after-activation nil)
-(setq imenu-list-auto-resize t)
+(setq imenu-list-auto-resize nil)
 (setq imenu-list-position 'right)
-(setq imenu-list-size 32)
+(setq imenu-list-size 27)
 
 ;; ace jump
 (x/require-package 'avy)
