@@ -18,7 +18,6 @@
             (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)))
 
 (define-key global-map (kbd "C-c e a") 'sr-speedbar-toggle)
-(define-key global-map (kbd "C-c e b") 'x/create-tmp-buffer)
 (define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
 (define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))
 (define-key global-map (kbd "C-c e f") 'fzf)
@@ -30,6 +29,7 @@
 
 (define-key global-map (kbd "C-c b n") 'next-buffer)
 (define-key global-map (kbd "C-c b p") 'previous-buffer)
+(define-key global-map (kbd "C-c b c") 'x/create-tmp-buffer)
 
 (define-key global-map (kbd "C-c h") 'helm-command-prefix)
 (define-key global-map (kbd "C-c h x") 'helm-register)
