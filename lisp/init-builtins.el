@@ -85,4 +85,10 @@
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
 
+;; mouse scrolling
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 3)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+(setq scroll-step 1)
+
 (provide 'init-builtins)
