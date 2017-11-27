@@ -4,6 +4,7 @@
 - add fzf mode with helm - or - shackle-mode
 - add shackle - C-c e q => quit last window
 - highlight-symbol => helm all
+- todo: margin not work in started scratch buffer 
 
 # install latest emacs on ubuntu
 

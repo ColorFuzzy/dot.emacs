@@ -1,12 +1,16 @@
 (require 'cl-lib)
 
-;; gui elements
+;; gui elements & margin & fringe
 (if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)
       (tool-bar-mode -1)
       (fringe-mode '(6 . 0)))
-  (menu-bar-mode -1))
+  (progn
+    (menu-bar-mode -1)
+    (setq-default
+     left-margin-width 1
+     right-margin-width 0)))
 
 ;; window size
 (setq default-frame-alist '((width . 120) (height . 38)))
@@ -22,14 +26,6 @@
 ;; monokai theme
 (x/require-package 'monokai-theme)
 (load-theme 'monokai t)
-
-;; set margin
-(add-hook 'window-setup-hook
-          (lambda ()
-            (if (not (display-graphic-p))
-                (setq-default
-                 left-margin-width 1
-                 right-margin-width 0))))
 
 ;; highlight current line
 (global-hl-line-mode t)
