@@ -4,7 +4,8 @@
 (if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)
-      (tool-bar-mode -1))
+      (tool-bar-mode -1)
+      (fringe-mode '(4 . 0)))
   (menu-bar-mode -1))
 
 ;; window size
@@ -23,9 +24,10 @@
 (load-theme 'monokai t)
 
 ;; set margin
-(setq-default
- left-margin-width 1
- right-margin-width 0)
+(if (not (display-graphic-p))
+    (setq-default
+     left-margin-width 1
+     right-margin-width 0))
 
 ;; highlight current line
 (global-hl-line-mode t)
