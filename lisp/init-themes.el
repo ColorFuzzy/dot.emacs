@@ -1,7 +1,14 @@
 (require 'cl-lib)
 
-;; hide menu-bar
-(menu-bar-mode -1)
+;; gui elements
+(if (display-graphic-p)
+    (progn
+      (scroll-bar-mode -1)
+      (tool-bar-mode -1))
+  (menu-bar-mode -1))
+
+;; window size
+(setq default-frame-alist '((width . 120) (height . 38)))
 
 ;; auto backgroud the color value
 (x/require-package 'rainbow-mode)
@@ -38,26 +45,42 @@
                       ("*Help*" :select t :align t :ratio 0.46)))
 (shackle-mode)
 
-(custom-set-faces
- ;; mode-line
- '(mode-line ((t (:background "#303030"))))
- '(mode-line-inactive ((t (:background "#121212"))))
-
- ;; region
- '(region ((t (:background "#203020"))))
-
- ;; highlight current line
- '(hl-line ((t (:background "#282828"))))
- 
- ;; indent guide
- '(indent-guide-face ((t (:foreground "#800000"))))
-
- ;; helm & shackle
- '(helm-ff-dotted-directory ((t (:background "#101010"))))
- '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
- 
- ;; avy
- '(avy-lead-face-0 ((t (:background "#008000"))))
- )
+(if (display-graphic-p)
+    (custom-set-faces
+     ;; font suport
+     '(default ((t (:family "Source Code Pro"))))
+     ;; show paren match
+     '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
+     ;; highlight-symbol
+     '(highlight-symbol-face ((t (:underline t))))
+     ;; mode-line
+     '(mode-line ((t (:background "#006030" :box nil))))
+     '(mode-line-inactive ((t (:background "#006030" :box nil))))
+     ;; region
+     '(region ((t (:background "#208020"))))
+     ;; helm & shackle
+     '(helm-ff-dotted-directory ((t (:foreground "#AAAAAA"))))
+     '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
+     )
+  (custom-set-faces
+   ;; show paren match
+   '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
+   ;; highlight-symbol
+   '(highlight-symbol-face ((t (:underline t))))
+   ;; mode-line
+   '(mode-line ((t (:background "#303030"))))
+   '(mode-line-inactive ((t (:background "#121212"))))
+   ;; region
+   '(region ((t (:background "#203020"))))
+   ;; highlight current line
+   '(hl-line ((t (:background "#282828"))))
+   ;; indent guide
+   '(indent-guide-face ((t (:foreground "#800000"))))
+   ;; helm & shackle
+   '(helm-ff-dotted-directory ((t (:background "#101010"))))
+   '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
+   ;; avy
+   '(avy-lead-face-0 ((t (:background "#008000"))))
+   ))
 
 (provide 'init-themes)
