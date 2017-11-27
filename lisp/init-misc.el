@@ -21,10 +21,7 @@
 (setq sr-speedbar-width 27)
 (setq speedbar-initial-expansion-list-name "buffers")
 (setq sr-speedbar-auto-refresh nil)
-(add-hook 'window-setup-hook
-          (lambda ()
-            (interactive)
-            (sr-speedbar-open)))
+(add-hook 'window-setup-hook 'sr-speedbar-open)
 
 ;; imenu-list
 (x/require-package 'imenu-list)
