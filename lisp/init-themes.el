@@ -5,7 +5,7 @@
     (progn
       (scroll-bar-mode -1)
       (tool-bar-mode -1)
-      (fringe-mode '(6 . 0)))
+      (fringe-mode '(8 . 0)))
   (progn
     (menu-bar-mode -1)
     (setq-default
