@@ -15,6 +15,17 @@
 (setq neo-window-width 24)
 (setq neo-theme 'arrow)
 
+;; sr-speedbar
+(x/require-package 'sr-speedbar)
+(setq speedbar-use-images nil)
+(setq sr-speedbar-width 24)
+(setq speedbar-initial-expansion-list-name "buffers")
+(setq sr-speedbar-auto-refresh nil)
+(add-hook 'window-setup-hook
+          (lambda ()
+            (interactive)
+            (sr-speedbar-open)))
+
 ;; imenu-list
 (x/require-package 'imenu-list)
 (setq imenu-list-focus-after-activation nil)

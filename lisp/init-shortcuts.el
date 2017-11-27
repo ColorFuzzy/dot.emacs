@@ -17,6 +17,7 @@
             (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) 
             (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)))
 
+(define-key global-map (kbd "C-c e a") 'sr-speedbar-toggle)
 (define-key global-map (kbd "C-c e b") 'x/create-tmp-buffer)
 (define-key global-map (kbd "C-c e m") (lambda () (interactive) (switch-to-buffer (get-buffer "*Messages*"))))
 (define-key global-map (kbd "C-c e s") (lambda () (interactive) (switch-to-buffer (get-buffer "*scratch*"))))

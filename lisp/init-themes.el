@@ -61,6 +61,8 @@
      ;; helm & shackle
      '(helm-ff-dotted-directory ((t (:foreground "#AAAAAA"))))
      '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
+     ;; sr-speedbar
+     '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
      )
   (custom-set-faces
    ;; show paren match
@@ -81,6 +83,8 @@
    '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
    ;; avy
    '(avy-lead-face-0 ((t (:background "#008000"))))
+   ;; sr-speedbar
+   '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
    ))
 
 (provide 'init-themes)
