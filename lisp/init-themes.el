@@ -63,6 +63,8 @@
      '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
      ;; highlight-symbol
      '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
+     ;; company
+     '(company-scrollbar-fg ((t (:background "#edd400"))))
      ;; org-mode
      `(org-level-1 ((t (:bold nil :foreground "dodger blue" :height 1.1))))
      `(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.1))))
@@ -91,6 +93,8 @@
    '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
    ;; highlight-symbol
    '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
+   ;; company
+   '(company-scrollbar-fg ((t (:background "#edd400"))))
    ))
 
 (provide 'init-themes)
