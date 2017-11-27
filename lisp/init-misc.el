@@ -13,6 +13,7 @@
 ;; file manager
 (x/require-package 'neotree)
 (setq neo-window-width 24)
+(setq neo-theme 'arrow)
 
 ;; imenu-list
 (x/require-package 'imenu-list)
