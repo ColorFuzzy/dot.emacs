@@ -26,7 +26,8 @@
           (lambda ()
             (sr-speedbar-open)
             (with-current-buffer sr-speedbar-buffer-name
-              (setq window-size-fixed 'width))))
+              (setq window-size-fixed 'width))
+            (switch-to-buffer "*scratch*")))
 
 ;; imenu-list
 (x/require-package 'imenu-list)
