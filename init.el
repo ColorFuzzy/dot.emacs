@@ -13,6 +13,8 @@
 (require 'init-company)
 (require 'init-misc)
 
+(require 'init-org)
+
 ;; should at the very last
 (require 'init-themes)  
 (require 'init-shortcuts)

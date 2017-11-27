@@ -51,8 +51,6 @@
      '(default ((t (:family "Source Code Pro")))) 
      ;; show paren match
      '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
-     ;; highlight-symbol
-     '(highlight-symbol-face ((t (:underline t))))
      ;; mode-line
      '(mode-line ((t (:background "#006030" :box nil))))
      '(mode-line-inactive ((t (:background "#006030" :box nil))))
@@ -67,8 +65,6 @@
   (custom-set-faces
    ;; show paren match
    '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
-   ;; highlight-symbol
-   '(highlight-symbol-face ((t (:underline t))))
    ;; mode-line
    '(mode-line ((t (:background "#303030"))))
    '(mode-line-inactive ((t (:background "#121212"))))

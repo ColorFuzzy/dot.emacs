@@ -1,11 +1,11 @@
 (require 'package)
 (eval-when-compile (require 'cl))
 
-(defun x/require-package (package &optional min-version no-refresh)
+(defun x/require-package (package &optional no-refresh)
   "Install given PACKAGE, optionally requiring MIN-VERSION.
 If NO-REFRESH is non-nil, the available package lists will not be
 re-downloaded in order to locate PACKAGE."
-  (if (package-installed-p package min-version)
+  (if (package-installed-p package)
       t
     (if (or (assoc package package-archive-contents) no-refresh)
         (if (boundp 'package-selected-packages)
@@ -14,7 +14,7 @@ re-downloaded in order to locate PACKAGE."
           (package-install package))
       (progn
         (package-refresh-contents)
-        (x/require-package package min-version t)))))
+        (x/require-package package t)))))
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
