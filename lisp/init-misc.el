@@ -18,7 +18,7 @@
 ;; sr-speedbar
 (x/require-package 'sr-speedbar)
 (setq speedbar-use-images nil)
-(setq sr-speedbar-width 24)
+(setq sr-speedbar-width 27)
 (setq speedbar-initial-expansion-list-name "buffers")
 (setq sr-speedbar-auto-refresh nil)
 (add-hook 'window-setup-hook
