@@ -38,4 +38,8 @@
        (interactive)
        (helm :sources '(restclient-helm-variables-source restclient-helm-requests-source)))))
 
+;; aggressive-indent
+(x/require-package 'aggressive-indent)
+(add-hook 'emacs-lisp-mode-hook 'aggressive-indent-mode)
+
 (provide 'init-misc)
