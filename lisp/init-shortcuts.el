@@ -1,6 +1,7 @@
 (x/require-package 'which-key)
 (which-key-mode t)
 (setq which-key-idle-delay 1.0)
+(setq which-key-side-window-max-height 0.54)
 
 (x/require-package 'key-chord)
 (key-chord-mode t)
