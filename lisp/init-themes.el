@@ -39,6 +39,7 @@
 (with-eval-after-load 'highlight-symbol (diminish 'highlight-symbol-mode))
 (with-eval-after-load 'indent-guide (diminish 'indent-guide-mode))
 (with-eval-after-load 'auto-revert-mode (diminish 'auto-revert-mode))
+(with-eval-after-load 'yasnippet (diminish 'yas-minor-mode))
 
 ;; window management
 (setq shackle-rules '(("\\`\\*helm.*?\\*\\'" :regexp t :align t :ratio 0.46)

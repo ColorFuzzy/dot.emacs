@@ -57,4 +57,8 @@
 (x/require-package 'aggressive-indent)
 (add-hook 'emacs-lisp-mode-hook 'aggressive-indent-mode)
 
+;; snippet
+(x/require-package 'yasnippet)
+(yas-global-mode 1)
+
 (provide 'init-misc)
