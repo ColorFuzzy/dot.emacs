@@ -54,4 +54,13 @@
 (x/require-package 'yasnippet)
 (yas-global-mode 1)
 
+;; wrap-region
+(x/require-package 'wrap-region)
+(wrap-region-global-mode t)
+(wrap-region-add-wrappers
+ '(("~" "~" "c" (org-mode))  ;; code
+   ("=" "=" "h" (org-mode))  ;; head
+   ("+" "+" "d" (org-mode))  ;; delete
+   ("*" "*" "b" (org-mode))))  ;; bold
+
 (provide 'init-misc)
