@@ -46,6 +46,14 @@
                       ("*Help*" :select t :align t :ratio 0.46)))
 (shackle-mode)
 
+;; org-mode
+(setq org-emphasis-alist
+      '(("=" (:weight bold :foreground "#FD971F"))  ;; header
+        ("*" (:weight normal :foreground "#A6E22E"))  ;; emphasis
+        ("~" (:weight bold :slant italic :foreground "#66D9EF"))  ;; code
+        ("+" (:strike-through t))  ;; delete
+        ("/" italic)
+        ("_" underline)))
 (if (display-graphic-p)
     (custom-set-faces
      ;; font suport: Source Code Pro & Monaco
