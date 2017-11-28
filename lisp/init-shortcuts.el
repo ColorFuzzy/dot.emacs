@@ -11,15 +11,6 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'none))
 
-;; restclient
-(eval-after-load 'restclient
-  '(progn
-     (define-key restclient-mode-map (kbd "C-c C-j") #'helm-restclient)
-     (defun helm-restclient ()
-       "Helm for Restclient."
-       (interactive)
-       (helm :sources '(restclient-helm-variables-source restclient-helm-requests-source)))))
-
 (add-hook 'helm-after-initialize-hook
           (lambda ()
             (define-key helm-map (kbd "C-z")  'helm-select-action)
