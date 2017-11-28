@@ -1,11 +1,14 @@
 (require 'cl-lib)
 
 ;; gui elements & margin & fringe
+(defun x/disable-scroll-bars (frame)
+  (modify-frame-parameters frame '((horizontal-scroll-bars . nil))))
 (if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)
       (tool-bar-mode -1)
-      (fringe-mode '(8 . 0)))
+      (fringe-mode '(8 . 0))
+      (add-hook 'after-make-frame-functions 'x/disable-scroll-bars))
   (progn
     (menu-bar-mode -1)
     (setq-default
