@@ -45,13 +45,6 @@
 ;; rest client
 (x/require-package 'restclient)
 (x/require-package 'restclient-helm)
-(eval-after-load 'restclient
-  '(progn
-     (define-key restclient-mode-map (kbd "C-c C-j") #'helm-restclient)
-     (defun helm-restclient ()
-       "Helm for Restclient."
-       (interactive)
-       (helm :sources '(restclient-helm-variables-source restclient-helm-requests-source)))))
 
 ;; aggressive-indent
 (x/require-package 'aggressive-indent)
