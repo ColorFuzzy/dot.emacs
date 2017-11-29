@@ -58,35 +58,46 @@
         ("/" italic)
         ("_" underline)))
 (if (display-graphic-p)
-    (custom-set-faces
-     ;; font suport: Source Code Pro & Monaco
-     '(default ((t (:family "Source Code Pro")))) 
-     ;; show paren match
-     '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
-     ;; mode-line
-     '(mode-line ((t (:background "#666666" :box nil))))
-     '(mode-line-inactive ((t (:background "#444444" :box nil))))
-     ;; region
-     '(region ((t (:background "#203080"))))
-     ;; helm & shackle
-     '(helm-ff-dotted-directory ((t (:foreground "#aaaaaa"))))
-     '(helm-buffer-modified ((t (:foreground "#cc0000" :weight bold))))
-     ;; sr-speedbar
-     '(speedbar-separator-face ((t (:weight bold :foreground "#00cc00" :background nil :box nil :overline nil))))
-     ;; highlight-symbol
-     '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
-     ;; company
-     '(company-scrollbar-fg ((t (:background "#cccccc"))))
-     ;; org-mode
-     '(org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.2))))
-     '(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.1))))
-     '(org-level-3 ((t (:bold nil :foreground "#6ac214" :height 1))))
-     '(org-level-4 ((t (:bold nil :foreground "#30e8d2" :height 1))))
-     '(org-level-5 ((t (:bold nil :foreground "#f539a0" :height 1))))
-     '(org-block-begin-line ((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1))))
-     '(org-block-end-line ((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1))))
-     '(org-block ((t (:background "#161616"))))
-     )
+    (progn
+      (defface org-block-background
+        '((t (:background "#161616")))
+        "face used for the source block background.")
+      (defface org-block-begin-line
+        '((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1)))
+        "face used for the line delimiting the begin of source blocks.")
+      (defface org-block-end-line
+        '((t (:inherit org-block-begin-line)))
+        "face used for the line delimiting the end of source blocks.")
+
+      (custom-set-faces
+       ;; font suport: Source Code Pro & Monaco
+       '(default ((t (:family "Source Code Pro")))) 
+       ;; show paren match
+       '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
+       ;; mode-line
+       '(mode-line ((t (:background "#666666" :box nil))))
+       '(mode-line-inactive ((t (:background "#444444" :box nil))))
+       ;; region
+       '(region ((t (:background "#203080"))))
+       ;; helm & shackle
+       '(helm-ff-dotted-directory ((t (:foreground "#aaaaaa"))))
+       '(helm-buffer-modified ((t (:foreground "#cc0000" :weight bold))))
+       ;; sr-speedbar
+       '(speedbar-separator-face ((t (:weight bold :foreground "#00cc00" :background nil :box nil :overline nil))))
+       ;; highlight-symbol
+       '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
+       ;; company
+       '(company-scrollbar-fg ((t (:background "#cccccc"))))
+       ;; org-mode
+       '(org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.2))))
+       '(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.1))))
+       '(org-level-3 ((t (:bold nil :foreground "#6ac214" :height 1))))
+       '(org-level-4 ((t (:bold nil :foreground "#30e8d2" :height 1))))
+       '(org-level-5 ((t (:bold nil :foreground "#f539a0" :height 1))))
+       '(org-block-background ((t (:background "#161616"))))
+       '(org-block-begin-line ((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1))))
+       '(org-block-end-line ((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1))))
+       ))
   (custom-set-faces
    ;; show paren match
    '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
