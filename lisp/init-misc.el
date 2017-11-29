@@ -63,4 +63,11 @@
    ("+" "+" "d" (org-mode))  ;; delete
    ("*" "*" "b" (org-mode))))  ;; bold
 
+;; emamux - send text to tmux
+(x/require-package 'emamux)
+(setq-default emamux:completing-read-type 'helm)
+
+;; zoom-window - like C-q z in tmux
+(x/require-package 'zoom-window)
+
 (provide 'init-misc)

@@ -49,6 +49,10 @@
                       ("*Help*" :select t :align t :ratio 0.46)))
 (shackle-mode)
 
+;; zoom window
+(custom-set-variables
+ '(zoom-window-mode-line-color "red"))
+
 ;; org-mode
 (setq org-emphasis-alist
       '(("=" (:weight bold :foreground "#fd971f"))  ;; header
