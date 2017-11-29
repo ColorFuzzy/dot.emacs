@@ -51,9 +51,9 @@
 
 ;; org-mode
 (setq org-emphasis-alist
-      '(("=" (:weight bold :foreground "#FD971F"))  ;; header
-        ("*" (:weight normal :foreground "#A6E22E"))  ;; emphasis
-        ("~" (:weight bold :slant italic :foreground "#66D9EF"))  ;; code
+      '(("=" (:weight bold :foreground "#fd971f"))  ;; header
+        ("*" (:weight normal :foreground "#a6e22e"))  ;; emphasis
+        ("~" (:weight bold :slant italic :foreground "#66d9ef"))  ;; code
         ("+" (:strike-through t))  ;; delete
         ("/" italic)
         ("_" underline)))
@@ -69,20 +69,23 @@
      ;; region
      '(region ((t (:background "#203080"))))
      ;; helm & shackle
-     '(helm-ff-dotted-directory ((t (:foreground "#AAAAAA"))))
-     '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
+     '(helm-ff-dotted-directory ((t (:foreground "#aaaaaa"))))
+     '(helm-buffer-modified ((t (:foreground "#cc0000" :weight bold))))
      ;; sr-speedbar
-     '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
+     '(speedbar-separator-face ((t (:weight bold :foreground "#00cc00" :background nil :box nil :overline nil))))
      ;; highlight-symbol
      '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
      ;; company
-     '(company-scrollbar-fg ((t (:background "#CCCCCC"))))
+     '(company-scrollbar-fg ((t (:background "#cccccc"))))
      ;; org-mode
      '(org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.2))))
      '(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.1))))
      '(org-level-3 ((t (:bold nil :foreground "#6ac214" :height 1))))
      '(org-level-4 ((t (:bold nil :foreground "#30e8d2" :height 1))))
-     '(org-level-5 ((t (:bold nil :foreground "#e539a0" :height 1))))
+     '(org-level-5 ((t (:bold nil :foreground "#f539a0" :height 1))))
+     '(org-block-begin-line ((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1))))
+     '(org-block-end-line ((t (:bold t :foreground "#ff00ff" :background "#000000" :height 1))))
+     '(org-block ((t (:background "#161616"))))
      )
   (custom-set-faces
    ;; show paren match
@@ -98,11 +101,11 @@
    '(indent-guide-face ((t (:foreground "#800000"))))
    ;; helm & shackle
    '(helm-ff-dotted-directory ((t (:background "#101010"))))
-   '(helm-buffer-modified ((t (:foreground "#CC0000" :weight bold))))
+   '(helm-buffer-modified ((t (:foreground "#cc0000" :weight bold))))
    ;; avy
    '(avy-lead-face-0 ((t (:background "#008000"))))
    ;; sr-speedbar
-   '(speedbar-separator-face ((t (:weight bold :foreground "#00CC00" :background nil :box nil :overline nil))))
+   '(speedbar-separator-face ((t (:weight bold :foreground "#00cc00" :background nil :box nil :overline nil))))
    ;; highlight-symbol
    '(highlight-symbol-face ((t (:underline nil :background "#4f5769"))))
    ))
