@@ -2,7 +2,8 @@
 
 ;; gui elements & margin & fringe
 (defun x/disable-scroll-bars (frame)
-  (modify-frame-parameters frame '((horizontal-scroll-bars . nil))))
+  (modify-frame-parameters frame '((horizontal-scroll-bars . nil)
+                                   (vertical-scroll-bars . nil))))
 (if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)

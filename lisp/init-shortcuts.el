@@ -57,6 +57,4 @@
 (define-key global-map (kbd "M-n") 'highlight-symbol-next)
 (define-key global-map (kbd "M-p") 'highlight-symbol-prev)
 
-(define-key global-map [remap describe-mode] 'helm-describe-modes)
-
 (provide 'init-shortcuts)
