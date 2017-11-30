@@ -5,7 +5,7 @@
 - add shackle - C-c e q => quit last window
 - highlight-symbol => helm all
 - todo: margin not work in started scratch buffer
-- why other-frame auto split current window
+- why other-frame auto split current window => sr-speedbar bug
 
 # install latest emacs on ubuntu
 
