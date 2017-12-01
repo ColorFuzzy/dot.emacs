@@ -26,6 +26,7 @@
 ;; rainbow delimiters
 (x/require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'sql-mode-hook 'rainbow-delimiters-mode)
 
 ;; monokai theme
 (x/require-package 'monokai-theme)
