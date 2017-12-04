@@ -70,4 +70,23 @@
 ;; zoom-window - like C-q z in tmux
 (x/require-package 'zoom-window)
 
+;; dired enhancement
+(x/require-package 'dired+)
+(x/require-package 'dired-sort)
+(setq-default diredp-hide-details-initially-flag nil
+              dired-dwim-target t)
+(let ((gls (executable-find "gls")))
+  (when gls (setq insert-directory-program gls)))
+(with-eval-after-load 'dired
+  (require 'dired+)
+  (require 'dired-sort)
+  (when (fboundp 'global-dired-hide-details-mode)
+    (global-dired-hide-details-mode -1))
+  (setq dired-recursive-deletes 'top))
+(when (x/require-package 'diff-hl)
+  (with-eval-after-load 'dired
+    (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
+(autoload 'dired-jump "dired-x"
+  "Jump to Dired buffer corresponding to current buffer." t)
+
 (provide 'init-misc)

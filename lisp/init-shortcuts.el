@@ -46,6 +46,7 @@
 (define-key global-map (kbd "C-s") 'helm-occur)
 (define-key global-map (kbd "C-x b") 'helm-mini)
 (define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+(define-key global-map (kbd "C-x C-d") 'dired-jump)
 (define-key global-map (kbd "C-x C-e") 'x/eval)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
