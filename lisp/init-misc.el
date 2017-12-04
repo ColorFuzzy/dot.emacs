@@ -89,4 +89,10 @@
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
 
+;; ivy / swiper /counsel
+(x/require-package 'ivy)
+(x/require-package 'swiper)
+(x/require-package 'counsel)
+(ivy-mode t)
+
 (provide 'init-misc)
