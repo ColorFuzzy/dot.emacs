@@ -41,6 +41,8 @@
 
 ;; git support
 (x/require-package 'magit)
+(x/require-package 'diff-hl)
+(global-diff-hl-mode t)
 
 ;; rest client
 (x/require-package 'restclient)
@@ -83,11 +85,10 @@
   (when (fboundp 'global-dired-hide-details-mode)
     (global-dired-hide-details-mode -1))
   (setq dired-recursive-deletes 'top))
-(when (x/require-package 'diff-hl)
-  (with-eval-after-load 'dired
-    (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
+(with-eval-after-load 'dired
+  (add-hook 'dired-mode-hook 'diff-hl-dired-mode))
 
 ;; ivy / swiper /counsel
 (x/require-package 'ivy)
