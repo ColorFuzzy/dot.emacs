@@ -43,6 +43,7 @@
 (x/require-package 'magit)
 (x/require-package 'diff-hl)
 (global-diff-hl-mode t)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 ;; rest client
 (x/require-package 'restclient)
