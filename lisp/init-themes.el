@@ -17,7 +17,7 @@
      right-margin-width 0)))
 
 ;; window size
-(setq default-frame-alist '((width . 120) (height . 38)))
+(setq default-frame-alist '((width . 136) (height . 42)))
 
 ;; auto backgroud the color value
 (x/require-package 'rainbow-mode)
