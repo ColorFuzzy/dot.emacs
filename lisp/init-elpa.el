@@ -20,4 +20,7 @@ re-downloaded in order to locate PACKAGE."
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
+(x/require-package 'paradox)
+(setq paradox-github-token "46a0c88634fc75ed729e23829b661b428d956bf8")
+
 (provide 'init-elpa)

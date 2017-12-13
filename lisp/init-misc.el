@@ -22,12 +22,12 @@
 (setq speedbar-initial-expansion-list-name "buffers")
 (setq sr-speedbar-right-side t)
 (setq sr-speedbar-auto-refresh t)
-(add-hook 'window-setup-hook
-          (lambda ()
-            (sr-speedbar-open)
-            (with-current-buffer sr-speedbar-buffer-name
-              (setq window-size-fixed 'width))
-            (switch-to-buffer "*scratch*")))
+;; (add-hook 'window-setup-hook
+;;           (lambda ()
+;;             (sr-speedbar-open)
+;;             (with-current-buffer sr-speedbar-buffer-name
+;;               (setq window-size-fixed 'width))
+;;             (switch-to-buffer "*scratch*")))
 
 ;; imenu-list
 (x/require-package 'imenu-list)
@@ -96,5 +96,8 @@
 (x/require-package 'swiper)
 (x/require-package 'counsel)
 (ivy-mode t)
+
+;; visual regexp
+(x/require-package 'visual-regexp)
 
 (provide 'init-misc)
