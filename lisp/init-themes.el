@@ -81,8 +81,8 @@
        ;; show paren match
        '(show-paren-match-face ((t (:underline t :strike-through t :foreground nil :background nil))))
        ;; mode-line
-       '(mode-line ((t (:background "#969696" :box nil))))
-       '(mode-line-inactive ((t (:background "#666666" :box nil))))
+       ;; '(mode-line ((t (:background "#969696" :box nil))))
+       ;; '(mode-line-inactive ((t (:background "#bbbbbb" :box nil))))
        ;; region
        '(region ((t (:background "#203080"))))
        ;; helm & shackle
